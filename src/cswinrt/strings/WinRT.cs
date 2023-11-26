@@ -258,10 +258,6 @@ namespace WinRT
         }
     }
 
-    internal struct VftblPtr
-    {
-        public IntPtr Vftbl;
-    }
     internal static partial class Context
     {
         [DllImport("api-ms-win-core-com-l1-1-0.dll")]
