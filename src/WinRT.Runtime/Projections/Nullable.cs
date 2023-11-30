@@ -173,9 +173,8 @@ namespace ABI.System
             internal unsafe Vftbl(IntPtr thisPtr)
             {
                 var vftblPtr = *(void***)thisPtr;
-                var vftbl = (IntPtr*)vftblPtr;
                 IInspectableVftbl = *(IInspectable.Vftbl*)vftblPtr;
-                get_Value_0 = Marshal.GetDelegateForFunctionPointer(vftbl[6], get_Value_0_Type);
+                get_Value_0 = Marshal.GetDelegateForFunctionPointer((IntPtr)vftblPtr[6], get_Value_0_Type);
             }
         }
 
