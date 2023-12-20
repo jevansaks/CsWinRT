@@ -311,6 +311,7 @@ namespace GuidPatch
                             il.Emit(OpCodes.Add_Ovf);
                             il.Emit(OpCodes.Stloc, fullSignatureLength);
                         }
+                        break;
                     default:
                         il.Clear();
                         throw new InvalidOperationException();

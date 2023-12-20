@@ -269,6 +269,7 @@ namespace GuidPatch
                     {
                         emitter.PushFallback(fallback.Type);
                     }
+                    break;
                 default:
                     break;
             }
