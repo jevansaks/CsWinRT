@@ -37,6 +37,8 @@ namespace GuidPatch
     
     sealed record UninstantiatedGeneric(GenericParameter OriginalGenericParameter) : SignaturePart;
 
+    sealed record GenericFallback(TypeReference Type) : SignaturePart;
+
     abstract record SignatureWithChildren(string GroupingName, string ThisEntitySignature, IEnumerable<SignaturePart> ChildrenSignatures) : SignaturePart;
 
     sealed record GenericSignature(Guid BaseGuid, IEnumerable<SignaturePart> GenericMemberSignatures) : 
@@ -173,19 +175,7 @@ namespace GuidPatch
             // TODO-WuxMux: We can instead take an option in the IID optimizer to hard-code the lookup for WUX or MUX when specified, which would be more efficient for scenarios where this is possible.
             if (helperType?.Resolve().CustomAttributes.Any(attr => attr.AttributeType.Resolve() == wuxMuxProjectedInterfaceAttributeType) == true)
             {
-                var getGuidSignatureMethod = new MethodReference("GetGuidSignature", assembly.MainModule.TypeSystem.String, helperType)
-                {
-                    HasThis = false
-                };
-
-                if (getGuidSignatureMethod.Resolve() is not null)
-                {
-                    return new CustomSignatureMethod(assembly.MainModule.ImportReference(getGuidSignatureMethod));
-                }
-                else
-                {
-                    throw new InvalidOperationException($"Unable to resolve GetGuidSignature method for type projected into .NET from WUX/MUX: {type.FullName}.");
-                }
+                return new GenericFallback(type);
             }
 
             Guid? guidAttributeValue = type.ReadGuidFromAttribute(guidAttributeType, winRTRuntimeAssembly);

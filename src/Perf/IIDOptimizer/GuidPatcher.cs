@@ -265,6 +265,10 @@ namespace GuidPatch
                         emitter.PushCustomSignature(custom.Method);
                     }
                     break;
+                case GenericFallback fallback:
+                    {
+                        emitter.PushFallback(fallback.Type);
+                    }
                 default:
                     break;
             }
