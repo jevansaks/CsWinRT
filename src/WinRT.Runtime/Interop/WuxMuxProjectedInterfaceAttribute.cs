@@ -9,10 +9,16 @@ namespace WinRT.Interop
     /// For this type, the GuidAttribute is not used and instead the GetGuidSignature method must be called to get the IID or generic IID signature part of the type.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface | AttributeTargets.Delegate, AllowMultiple = false, Inherited = false)]
-    internal sealed class WuxMuxProjectedTypeAttribute(string wuxIID, string muxIID) : Attribute
+    internal sealed class WuxMuxProjectedTypeAttribute : Attribute
     {
-        public Guid WuxIID { get; } = Guid.Parse(wuxIID);
+        public Guid WuxIID { get; }
 
-        public Guid MuxIID { get; } = Guid.Parse(muxIID);
+        public Guid MuxIID { get; }
+
+        public WuxMuxProjectedTypeAttribute(string wuxIID, string muxIID)
+        {
+            WuxIID = Guid.Parse(wuxIID);
+            MuxIID = Guid.Parse(muxIID);
+        }
     }
 }

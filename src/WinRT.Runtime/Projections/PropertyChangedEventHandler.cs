@@ -12,7 +12,7 @@ namespace ABI.System.ComponentModel
 {
     [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
     [Guid("E3DE52F6-1E32-5DA6-BB2D-B5B6096C962D")]
-    [WuxMuxProjectedType(wuxIID: "50f19c16-0a22-4d8e-a089-1ea9951657d2", muxIID: "E3DE52F6-1E32-5DA6-BB2D-B5B6096C962D")]
+    [WuxMuxProjectedType(wuxIID: "50F19C16-0A22-4D8E-A089-1EA9951657D2", muxIID: "E3DE52F6-1E32-5DA6-BB2D-B5B6096C962D")]
 #if EMBED
     internal
 #else
@@ -42,7 +42,7 @@ namespace ABI.System.ComponentModel
             Marshal.StructureToPtr(AbiToProjectionVftable, nativeVftbl, false);
             AbiToProjectionVftablePtr = nativeVftbl;
             IID = Projections.UiXamlModeSetting == Projections.UiXamlMode.WindowsUiXaml
-                ? Guid.Parse("50f19c16-0a22-4d8e-a089-1ea9951657d2")
+                ? Guid.Parse("50F19C16-0A22-4D8E-A089-1EA9951657D2")
                 : Guid.Parse("E3DE52F6-1E32-5DA6-BB2D-B5B6096C962D");
         }
 

@@ -79,7 +79,7 @@ namespace GuidPatch
 
             TypeReference helperType = type.GetCswinrtAbiTypeDefinition(winRTRuntimeAssembly);
 
-            if (helperType is not null)
+            if (helperType.Resolve() is not null)
             {
                 if (type.IsGenericInstance)
                 {

@@ -12,12 +12,12 @@ namespace ABI.Microsoft.UI.Xaml.Interop
 {
     [global::WinRT.ObjectReferenceWrapper(nameof(_obj))]
     [Guid("DA049FF2-D2E0-5FE8-8C7B-F87F26060B6F")]
-    [WuxMuxProjectedType(wuxIID: "4cf68d33-e3f2-4964-b85e-945b4f7e2f21", muxIID: "DA049FF2-D2E0-5FE8-8C7B-F87F26060B6F")]
+    [WuxMuxProjectedType(wuxIID: "4CF68D33-E3F2-4964-B85E-945B4F7E2F21", muxIID: "DA049FF2-D2E0-5FE8-8C7B-F87F26060B6F")]
     internal sealed unsafe class INotifyCollectionChangedEventArgs
     {
         [Guid("DA049FF2-D2E0-5FE8-8C7B-F87F26060B6F")]
         [StructLayout(LayoutKind.Sequential)]
-        [WuxMuxProjectedType(wuxIID: "4cf68d33-e3f2-4964-b85e-945b4f7e2f21", muxIID: "DA049FF2-D2E0-5FE8-8C7B-F87F26060B6F")]
+        [WuxMuxProjectedType(wuxIID: "4CF68D33-E3F2-4964-B85E-945B4F7E2F21", muxIID: "DA049FF2-D2E0-5FE8-8C7B-F87F26060B6F")]
         public struct Vftbl
         {
             internal IInspectable.Vftbl IInspectableVftbl;
@@ -192,10 +192,10 @@ namespace ABI.Microsoft.UI.Xaml.Interop
     }
 
     [global::WinRT.ObjectReferenceWrapper(nameof(_obj))]
-    [Guid("b30c3e3a-df8d-44a5-9a38-7ac0d08ce63d")]
+    [Guid("B30C3E3A-DF8D-44A5-9A38-7AC0D08CE63D")]
     internal sealed unsafe class WUXNotifyCollectionChangedEventArgsRuntimeClassFactory : IWinRTNotifyCollectionChangedEventArgsRuntimeClassFactory
     {
-        [Guid("b30c3e3a-df8d-44a5-9a38-7ac0d08ce63d")]
+        [Guid("B30C3E3A-DF8D-44A5-9A38-7AC0D08CE63D")]
         [StructLayout(LayoutKind.Sequential)]
         public struct Vftbl
         {

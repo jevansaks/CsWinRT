@@ -23,12 +23,12 @@ namespace ABI.System.ComponentModel
 
     [DynamicInterfaceCastableImplementation]
     [Guid("90B17601-B065-586E-83D9-9ADC3A695284")]
-    [WuxMuxProjectedType(wuxIID: "cf75d69c-f2f4-486b-b302-bb4c09baebfa", muxIID: "90B17601-B065-586E-83D9-9ADC3A695284")]
+    [WuxMuxProjectedType(wuxIID: "CF75D69C-F2F4-486B-B302-BB4C09BAEBFA", muxIID: "90B17601-B065-586E-83D9-9ADC3A695284")]
     internal unsafe interface INotifyPropertyChanged : global::System.ComponentModel.INotifyPropertyChanged
     {
         [Guid("90B17601-B065-586E-83D9-9ADC3A695284")]
         [StructLayout(LayoutKind.Sequential)]
-        [WuxMuxProjectedType(wuxIID: "cf75d69c-f2f4-486b-b302-bb4c09baebfa", muxIID: "90B17601-B065-586E-83D9-9ADC3A695284")]
+        [WuxMuxProjectedType(wuxIID: "CF75D69C-F2F4-486B-B302-BB4C09BAEBFA", muxIID: "90B17601-B065-586E-83D9-9ADC3A695284")]
         public struct Vftbl
         {
 
