@@ -77,7 +77,7 @@ namespace GuidPatch
 
             var typeDef = type.Resolve();
 
-            TypeReference helperType = type.GetCswinrtAbiTypeDefinition(winRTRuntimeAssembly);
+            var helperType = new TypeReference($"ABI.{typeDef.Namespace}", typeDef.Name, typeDef.Module, assembly.MainModule);
 
             if (helperType.Resolve() is not null)
             {
